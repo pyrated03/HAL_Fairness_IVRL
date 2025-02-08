@@ -1,0 +1,26 @@
+# ADMM Implementation
+import torch
+import torch.nn.functional as F
+import numpy as np
+
+
+def DEP(x, y):
+    pass
+
+
+def ADMM(Zp, S, Y, epsilon, r, theta=None):
+    # We want to make Dep(KZp, KS) <= epsilon while maximizing Dep(KZp, KY)
+    n = Zp.shape[0]
+    if not theta:
+        theta = np.zeros((r, n))
+    new_KZp = theta * Zp
+    Aug_lag = DEP(Zp, Y)
+
+
+def main():
+
+    # class ADMM(torch.nn.Module):
+
+    #     def __init__(self):
+    #         super(ADMM, self).__init__()
+    #         self = 0
